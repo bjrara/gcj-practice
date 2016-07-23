@@ -7,7 +7,7 @@ import java.util.Map;
  * Created by mengyizhou on 7/10/16.
  */
 // p51
-public class Knapsack {
+public class ZeorOrOneKnapsack {
     public static void main(String[] args) {
         int[] w = new int[]{2, 1, 3, 2};
         int[] v = new int[]{3, 2, 4, 2};
@@ -32,7 +32,7 @@ public class Knapsack {
 
         total_v = 0;
         int a, b;
-        // to choose and not to choose
+        // to choose or not to choose
         a = solve(n, w, v, W - w[i], i + 1, cache) + v[i]; // f(i, W) = f(i + 1, W - w[i]) + v[i]
         b = solve(n, w, v, W, i + 1, cache); // f(i, W) = f(i + 1, W)
         total_v += max(a, b); // total_v = f(i, W) = max(f(i + 1, W - w[i]) + v[i], f(i + 1, W))
