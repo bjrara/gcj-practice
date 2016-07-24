@@ -19,6 +19,7 @@ public class UnboundedKnapsack {
         System.out.println(solve2(c, w, v, W));
     }
 
+    // p57
     private static int solve0(int c, int[] w, int[] v, int W) {
         int[][] matrix = new int[c + 1][W + 1];
         for (int i = c - 1; i >= 0; i--) {
